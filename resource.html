@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资源共享 - 童心汇聚·客家传情</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/resource.css">
+</head>
+<body>
+  <!-- 顶部链接栏 -->
+  <div class="top-bar">
+    <div class="logo-container">
+      <img src="img/客家文化-5.png" class="logo" alt="Logo">
+      <div class="site-title">
+        <span class="title-left">童心汇聚·</span><span class="title-right">客家传情</span>
+      </div>
+    </div>
+    <div class="top-links">
+    <!-- 检查是否已登录 -->
+    <script>
+        if(sessionStorage.getItem("username")) {
+            document.write('<a href="#" onclick="logout()">退出登录</a>');
+        } else {
+            document.write('<a href="登录/log.html">登录</a>');
+            document.write('<a href="登录/index.html">注册</a>');
+        }
+        
+        function logout() {
+            sessionStorage.removeItem("username");
+            window.location.href = "home.html";
+        }
+    </script>
+    <a href="#">加入收藏</a>
+    <a href="#">设为首页</a>
+  </div>
+  </div>
+  
+  <!-- 主导航栏 -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">首页</a></li>
+        <li class="active"><a href="resource.html">资源共享</a></li>
+        <li><span>文创发售</span></li>
+        <li><a href="performance.html">公益展演</a></li>
+        <li><a href="education.html">教育服务</a></li>
+        <li><span>AI编曲</span></li>
+        <li><span>关于我们</span></li>
+      </ul>
+    </nav>
+    <div class="search-login">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" placeholder="搜索客家文化...">
+    </div>
+  </header>
+  
+  <!-- 轮播区域 -->
+  <div class="banner-container">
+    <div class="banner resource-banner">
+      <div class="slides">
+        <!-- 轮播项1 - 嘿！阿弟枯 -->
+        <div class="slide active">
+          <div class="slide-content">
+            <div class="text-content">
+            <div class="inner-border">
+              <p>全球第一部客家儿童音乐剧《嘿！阿弟牯》，改编自知名作家小野的作品《宝莉回家》，描述客家小男孩阿弟牯与宝莉台风家族之间的故事，展现客家人乐观坚毅的性格，与大自然和平共处。</p>
+              <p>桐花岛的阿弟牯快乐的在岛上生活，而台风家族的宝莉在成年礼时必须登陆桐花岛。此时岛上居民因缺水而举行祭典祈雨，阿弟牯的父亲黄小嘴因播报气象不准，嘴巴越变越小，这次依旧预报台风将至。不料，小台风宝莉却过度紧张而跌落山谷，阿弟牯和小乌、松鼠联手教导宝莉重新振作。</p>
+              <p>台风家族为了找回宝莉，四个台风同时登入桐花岛，却为小岛带来一场灾难；小宝莉加入救灾的行列，最后以雨水带来丰收，喜剧收场。</p>
+            </div>
+            </div>
+            <div class="pattern-center">
+              <img src="img/花纹.png" alt="装饰花纹" class="pattern-img">
+              <div class="vertical-text">《嘿！阿弟牯》</div>
+            </div>
+            <div class="play-image" style="background-image: url('img/阿弟枯.png')"></div>
+          </div>
+        </div>
+        
+        <!-- 轮播项2 - 雨马 -->
+        <div class="slide">
+          <div class="slide-content">
+            <div class="text-content">
+            <div class="inner-border">
+              <p>客家亲子音乐剧《雨马》是由客家委员会与纸风车剧团联合制作的一部创新性舞台作品，改编自作家小野的原创绘本故事，融合了歌舞、特技、火舞特效等多元艺术形式，旨在通过生动的表演传递客家文化的精神内核。</p>
+              <p>故事以虚构的“欢猴岛”为背景，讲述了猴族与花族因猴痘疫情和干旱陷入困境，三个孩子凭借坚强、温柔与勇敢，揭开被隐瞒的历史，最终化解族群矛盾并找到救赎的故事。剧中核心角色“雨马”是一座高达10公尺的巨型机械装置艺术，身披彩虹鬃毛，象征雨后希望与祝福，带给观众震撼的视觉体验。</p>
+              <p>该剧巧妙融入了客家文化元素，如传统零嘴“余甘子”、蓝染技艺、客家花布及民谣《落水天》等，既展现客家先民智慧，也唤起观众对族群记忆的共鸣。</p>
+            </div>
+            </div>
+            <div class="pattern-center">
+              <img src="img/花纹.png" alt="装饰花纹" class="pattern-img">
+              <div class="vertical-text">《雨马》</div>
+            </div>
+            <div class="play-image" style="background-image: url('img/雨马.jpg')"></div>
+          
+          </div>
+        </div>
+        
+        <!-- 轮播项3 - 小小茶花女 -->
+        <div class="slide">
+          <div class="slide-content">
+            <div class="text-content">
+            <div class="inner-border">
+              <p>《小小茶花女》是2014年由新北市政府客家事务局主办、六艺剧团演出的客家儿童音乐剧。</p>
+              <p> 一个坏脾气的女孩琪琪,对一个并不相识的客家阿婆不礼貌,虽然亲切的阿婆不以为意,不过跟着阿婆住在茶树园的四个茶花精灵看不下去，就施魔法让琪琪的书包变不见,要找回书包就必须找到四句通关密语。经过了一路上遇到的各种遭遇，琪琪不只学会了四句通关密语，也更认识到客家人的各种传统与习俗，更认识了客家精神的美。</p>
+              <p> 该剧在新北市多个学校和社区巡回演出，包括偏乡地区如金山、平溪、双溪等，旨在推广客家文化，并受到观众的热烈欢迎。演出不仅让孩子们了解客家传统，也通过互动和趣味性表演增强了文化教育的吸引力。</p>
+            </div>
+            </div>
+            <div class="pattern-center">
+              <img src="img/花纹.png" alt="装饰花纹" class="pattern-img">
+              <div class="vertical-text">《小小茶花女》</div>
+            </div>
+            <div class="play-image" style="background-image: url('img/茶花女.png')"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 轮播指示器 -->
+      <div class="slide-indicators">
+        <div class="indicator active" data-slide="0"></div>
+        <div class="indicator" data-slide="1"></div>
+        <div class="indicator" data-slide="2"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 视频区域 -->
+  <!-- 修改后的视频区域 -->
+<div class="video-section">
+  <h2 class="section-title">更多精彩</h2>
+  <div class="video-grid">
+    <a href="resource-detail/amin.html" class="video-link">
+      <div class="video-item">
+        <div class="video-container" style="width:100%; height:210px;">
+          <img src="img/阿民.jpg" alt="阿民与大黄" style="width:100%; height:auto;">
+        </div>
+        <div class="video-info">
+          <h3>《阿民与大黄》</h3>
+          <p>流淌着客家的温情与童真，讲述着人与动物质朴的羁绊，在歌声中唤醒心底的乡愁与感动。</p>
+        </div>
+      </div>
+    </a>
+    <a href="resource-detail/tonghua.html" class="video-link">
+      <div class="video-item">
+        <div class="video-container" style="width:100%; height:210px;">
+          <img src="img/桐花岛.jpg" alt="桐花岛的故事" style="width:100%; height:auto;">
+        </div>
+        <div class="video-info">
+          <h3>《桐花岛的故事》</h3>
+          <p>在落满桐花的岛屿上，一段被时光掩埋的客家往事，随着山歌的旋律缓缓苏醒……</p>
+        </div>
+      </div>
+    </a>
+    <a href="resource-detail/zhuge.html" class="video-link">
+      <div class="video-item">
+        <div class="video-container" style="width:100%; height:210px;">
+          <img src="img/诸葛四郎.jpg" alt="诸葛四郎" style="width:100%; height:auto;">
+        </div>
+        <div class="video-info">
+          <h3>《诸葛四郎》</h3>
+          <p>以经典漫画为蓝本，融合武侠与客家山歌，演绎英雄斗邪的冒险传奇。</p>
+        </div>
+      </div>
+    </a>
+    <a href="resource-detail/wuwu.html" class="video-link">
+      <div class="video-item">
+        <div class="video-container" style="width:100%; height:210px;">
+          <img src="img/wu.jpg" alt="新剧目1" style="width:100%; height:auto;">
+        </div>
+        <div class="video-info">
+          <h3>《吾屋家个味瑞》</h3>
+          <p>在迁徙的诗行间，一炉乡愁慢火煨出千年客韵，舌尖上的族谱便有了温度。</p>
+        </div>
+      </div>
+    <a href="resource-detail/hua.html" class="video-link">
+      <div class="video-item">
+        <div class="video-container" style="width:100%; height:210px;">
+          <img src="img/hua.jpg " alt="新剧目2" style="width:100%; height:auto;">
+        </div>
+        <div class="video-info">
+          <h3>《鸡婆花》</h3>
+          <p>当山歌的藤蔓攀上现代舞台，一朵倔强的客家“鸡婆花”在谣谚里绽放。</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+  
+  <!-- 页脚 -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 童心汇聚·客家传情 版权所有</p>
+      <p>传承客家文化，弘扬民族精神</p>
+    </div>
+  </footer>
+
+  <script src="js/resource.js"></script>
+</body>
+</html>

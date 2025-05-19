@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公益展演 - 童心汇聚·客家传情</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/performance.css">
+</head>
+<body>
+  <!-- 顶部链接栏 -->
+  <div class="top-bar">
+    <div class="logo-container">
+      <img src="img/客家文化-5.png" class="logo" alt="Logo">
+      <div class="site-title">
+        <span class="title-left">童心汇聚·</span><span class="title-right">客家传情</span>
+      </div>
+    </div>
+    <div class="top-links">
+    <!-- 检查是否已登录 -->
+    <script>
+        if(sessionStorage.getItem("username")) {
+            document.write('<a href="#" onclick="logout()">退出登录</a>');
+        } else {
+            document.write('<a href="登录/log.html">登录</a>');
+            document.write('<a href="登录/index.html">注册</a>');
+        }
+        
+        function logout() {
+            sessionStorage.removeItem("username");
+            window.location.href = "home.html";
+        }
+    </script>
+    <a href="#">加入收藏</a>
+    <a href="#">设为首页</a>
+  </div>
+  </div>
+  
+  <!-- 主导航栏 -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">首页</a></li>
+        <li><a href="resource.html">资源共享</a></li>
+        <li><span>文创发售</span></li>
+        <li class="active"><a href="performance.html">公益展演</a></li>
+        <li><a href="education.html">教育服务</a></li>
+        <li><span>AI编曲</span></li>
+        <li><span>关于我们</span></li>
+      </ul>
+    </nav>
+    <div class="search-login">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" placeholder="搜索客家文化...">
+    </div>
+  </header>
+  
+  <!-- 主要内容区域 -->
+  <div class="main-content">
+    <h1 class="section-title" data-text="公益展演预告">公益展演预告</h1>
+    
+    <!-- 展演预告卡片 -->
+    <div class="performance-card">
+      <div class="performance-header">
+        <h2>第八届海峡两岸暨香港、澳门学校音乐教育论坛</h2>
+        <div class="performance-meta">
+          <span><i class="fas fa-calendar-alt"></i> 2025年5月15-17日</span>
+          <span><i class="fas fa-map-marker-alt"></i> 华南师范大学音乐学院</span>
+        </div>
+      </div>
+      
+      <div class="performance-body">
+        <div class="performance-intro">
+          <p>由华南师范大学音乐学院主办，雷雨声音乐教育研究会承办；基础教育艺术·音乐课程标准实验研究项目组、北京师范大学艺术与传媒学院、澳门理工大学协办的"第八届海峡两岸暨香港、澳门学校音乐教育论坛"将于2025年5月15-17日在华南师范大学音乐学院举行。</p>
+          <p>本届论坛主题是"融合·创新·共享：新时代基础音乐教育的多元发展"。</p>
+        </div>
+        
+        <div class="performance-details">
+          <h3><i class="fas fa-info-circle"></i> 论坛详情</h3>
+          <div class="details-grid">
+            <div class="detail-item">
+              <h4>主要议题</h4>
+              <ul>
+                <li>基础音乐教育理论研讨</li>
+                <li>小学《唱游·音乐》课例展示</li>
+                <li>中小学音乐教学名师经验分享</li>
+                <li>儿童歌舞剧展演</li>
+              </ul>
+            </div>
+            <div class="detail-item">
+              <h4>特邀专家</h4>
+              <p>代百生 戴定澄 郭美女 郭声健 雷雨声 梁宝华 刘沛 谢嘉幸 徐元勇 尹爱青</p>
+              <p>(姓名按首字母排列)</p>
+            </div>
+            <div class="detail-item">
+              <h4>参会信息</h4>
+              <p>教师: 500元/人 | 学生: 200元/人</p>
+              <p>(入选论文、课例教师及名师工作室代表免会务费)</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="performance-schedule">
+          <h3><i class="fas fa-calendar-check"></i> 会议议程</h3>
+          <div class="schedule-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>日期</th>
+                  <th>上午议程</th>
+                  <th>下午议程</th>
+                  <th>晚上议程</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>5.15</td>
+                  <td colspan="3">全天报到</td>
+                </tr>
+                <tr>
+                  <td>5.16</td>
+                  <td>开幕式及专家发言</td>
+                  <td>论坛——基于跨学科整合策略<br>论坛——高师音乐教育专业人才培养方案研讨</td>
+                  <td>儿童歌舞剧展演</td>
+                </tr>
+                <tr>
+                  <td>5.17</td>
+                  <td>《唱游·音乐》课例片段展示<br>《唱游·音乐》教学工作坊<br>锣鼓经工作坊</td>
+                  <td>名师工作室经验分享<br>论文宣讲<br>闭幕式</td>
+                  <td>——</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 报名信息 -->
+        <h3><i class="fas fa-user-plus"></i> 报名信息</h3>
+        <div class="registration-info">
+          <p>本次展演面向大学城的学生开放80个免费观看名额。扫描下方二维码填写信息即可报名。<br>报名成功后，凭报名信息前往音乐厅正门领取门票并检票入场。</p>
+          <p><strong>检票时间：</strong>5月16日晚18:50~19:25</p>
+          <div class="qrcode-container">
+            <img src="img/报名.jpg" alt="报名二维码" onclick="openModal(this)" class="qrcode-img">
+            <p>扫描二维码报名</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="performance-footer">
+        <div class="contact-info">
+          <h4><i class="fas fa-phone-alt"></i> 联系方式</h4>
+          <p>罗老师: 19926071102 | 王老师: 17373364867</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 节目单展示 -->
+<div class="program-sheets">
+  <div class="sheet-container">
+    <div class="sheet-item">
+      <img src="img/节目单1.jpg" alt="论坛上半场节目单" onclick="openModal(this)">
+      <p>上半场节目单 </p>
+    </div>
+    <div class="sheet-item">
+      <img src="img/节目单2.jpg" alt="论坛下半场节目单" onclick="openModal(this)">
+      <p>下半场节目单</p>
+    </div>
+  </div>
+</div>
+
+<!-- 图片放大模态框 -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <div id="caption"></div>
+</div>
+
+
+    <!-- 更多展演预告 -->
+    <div class="more-performances">
+      <h2>更多展演预告</h2>
+      <div class="performance-list">
+        <div class="performance-item">
+          <div class="item-date">
+            <span class="date-day">18</span>
+            <span class="date-month">5月</span>
+          </div>
+          <div class="item-content">
+            <h3>客家儿童音乐剧《阿民与大黄》公益演出</h3>
+            <p>广州大剧院 | 上午10:00</p>
+          </div>
+          <button class="detail-btn">详情</button>
+        </div>
+        <div class="performance-item">
+          <div class="item-date">
+            <span class="date-day">25</span>
+            <span class="date-month">5月</span>
+          </div>
+          <div class="item-content">
+            <h3>原创客家儿童剧《惠心向党》校园巡演</h3>
+            <p>深圳少年宫 | 下午14:30</p>
+          </div>
+          <button class="detail-btn">详情</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 页脚 -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 童心汇聚·客家传情 版权所有</p>
+      <p>传承客家文化，弘扬民族精神</p>
+    </div>
+  </footer>
+
+  <script src="js/performance.js"></script>
+</body>
+</html>

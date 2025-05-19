@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>童心汇聚·客家传情</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <!-- 顶部链接栏 -->
+  <div class="top-bar">
+    <div class="logo-container">
+      <img src="img/客家文化-5.png" class="logo" alt="Logo">
+      <div class="site-title">
+        <span class="title-left">童心汇聚·</span><span class="title-right">客家传情</span>
+      </div>
+    </div>
+    <div class="top-links">
+    <!-- 检查是否已登录 -->
+    <script>
+        if(sessionStorage.getItem("username")) {
+            document.write('<a href="#" onclick="logout()">退出登录</a>');
+        } else {
+            document.write('<a href="登录/log.html">登录</a>');
+            document.write('<a href="登录/index.html">注册</a>');
+        }
+        
+        function logout() {
+            sessionStorage.removeItem("username");
+            window.location.href = "home.html";
+        }
+    </script>
+    <a href="#">加入收藏</a>
+    <a href="#">设为首页</a>
+  </div>
+  </div>
+  
+  <!-- 主导航栏 -->
+  <header>
+    <nav>
+      <ul>
+        <li class="active"><a href="home.html">首页</a></li>
+        <li><a href="resource.html">资源共享</a></li>
+        <li><span>文创发售</span></li>
+        <li><a href="performance.html">公益展演</a></li>
+        <li><a href="education.html">教育服务</a></li>
+        <li><span>AI编曲</span></li>
+        <li><span>关于我们</span></li>
+      </ul>
+    </nav>
+    <div class="search-login">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" placeholder="搜索客家文化...">
+    </div>
+  </header>
+  
+  <!-- 横幅区域 -->
+  <div class="banner-container">
+    <div class="banner">
+      <div class="slides">
+        <div class="slide slide1 active"></div>
+        <div class="slide slide2"></div>
+        <div class="slide slide3"></div>
+        <div class="slide slide4"></div>
+      </div>
+      <div class="slide-indicators">
+        <div class="indicator active" data-slide="0"></div>
+        <div class="indicator" data-slide="1"></div>
+        <div class="indicator" data-slide="2"></div>
+        <div class="indicator" data-slide="3"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 主要内容 -->
+  <div class="main-content">
+    <div class="culture-section">
+      <h1 class="culture-title">客家戏剧：千年古韵，客乡情长</h1>
+      <p class="culture-desc">
+        客家戏剧是客家文化的重要载体，融合了中原古韵与岭南风情，以独特的唱腔、方言和表演形式，讲述客家人迁徙、奋斗与情感的故事。其中，广东汉剧（又称“外江戏”）和采茶戏是客家戏剧的代表，既有庄重典雅的袍带戏，也有活泼诙谐的民间生活小品。
+      </p>
+      <p class="culture-desc seconde-paragraph">
+        客家戏剧的唱腔以中州音韵为基础，结合客家方言的声调，悠扬婉转；题材多展现忠孝节义、家国情怀，或反映客家人开荒拓土、勤俭坚韧的精神。舞台服饰华丽精致，脸谱色彩鲜明，伴奏乐器以头弦、大锣、唢呐为主，烘托出浓郁的地方特色。
+        如今，客家戏剧不仅是客家人维系文化认同的纽带，更成为非遗保护的重要对象。每逢节庆或宗族活动，锣鼓一响，戏台前便聚满乡邻，在熟悉的乡音中回味传统，感受穿越时空的文化共鸣。
+      </p>
+    </div>
+  </div>
+  
+  <!-- 页脚 -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 童心汇聚·客家传情 版权所有</p>
+      <p>传承客家文化，弘扬民族精神</p>
+    </div>
+  </footer>
+
+  <script src="js/home.js"></script>
+</body>
+</html>
