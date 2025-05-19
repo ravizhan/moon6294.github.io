@@ -47,7 +47,7 @@ function log() {
                 sessionStorage.setItem("username", uname);
                 alert("登录成功");
                 // 直接跳转到home页面
-                window.location.href = "../../home.html";
+                window.location.href = "../../index.html";
             } else {
                 alert("密码不正确");
             }
