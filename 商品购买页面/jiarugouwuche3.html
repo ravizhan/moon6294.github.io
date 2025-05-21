@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>商品详情页</title>
+
+		<link rel="stylesheet" href="./assets/css/jiarugouwuche.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+		<script src="assets/js/script.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+
+		<!-- 顶部链接栏 -->
+		<div class="top-bar">
+			<div class="logo-container">
+				<img src="./assets/images/logo1.png" class="logo" alt="Logo">
+				<div class="site-title">
+					<span class="title-left">童心汇聚·</span><span class="title-right">客家传情</span>
+				</div>
+			</div>
+			<div class="top-links">
+				<!-- 检查是否已登录 -->
+				<script>
+					if(sessionStorage.getItem("username")) {
+						document.write('<a href="#" onclick="logout()">退出登录</a>');
+					} else {
+						document.write('<a href="../log.html">登录</a>');
+			    		document.write('<a href="../index.html">注册</a>');
+					}
+
+					function logout() {
+						sessionStorage.removeItem("username");
+						window.location.href = "home.html";
+					}
+				</script>
+				<a href="#">加入收藏</a>
+				<a href="#">设为首页</a>
+			</div>
+		</div>
+
+		<!-- 主导航栏 -->
+		<header>
+			<nav data-navbar>
+				<ul>
+					<li class="active">
+						<a href="../教育服务&公益参演/home.html">首页</a>
+					</li>
+					<li>
+						<a href="../教育服务&公益参演/resource.html" ">资源共享</a></li>
+        <li><a href="../商品购买页面/shouye.html "">文创发售</a>
+					</li>
+					<li>
+						<a href="../教育服务&公益参演/performance.html">公益展演</a>
+					</li>
+					<li>
+						<a href="../教育服务&公益参演/education.html">教育服务</a>
+					</li>
+					<li>
+						<a href="../ai编曲页面信息/ai.html">AI编曲</a>
+					</li>
+					<li>
+						<a href="../我的/wode.html">关于我们</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="search-login">
+				<i class="fas fa-search search-icon"></i>
+				<input type="text" placeholder="搜索客家文化...">
+			</div>
+		</header>
+
+		<div data-overlay class="overlay"></div>
+
+		<main>
+			<article>
+
+				<!-- 
+        - #PRODUCT
+      -->
+
+				<section class="section product" aria-label="product">
+					<div class="container">
+
+						<div class="product-slides">
+
+							<div class="slider-banner" data-slider>
+								<figure class="product-banner">
+									<img src="./assets/images/a&h.jpg" width="500" height="500" loading="lazy" class="img-cover">
+								</figure>
+
+								<figure class="product-banner">
+									<img src="./assets/images/a&h1.jpg" width="600" height="600" loading="lazy" class="img-cover">
+								</figure>
+
+							</div>
+
+							<button class="slide-btn prev" aria-label="Previous image" data-prev>
+              <ion-icon name="chevron-back" aria-hidden="true"></ion-icon>
+            </button>
+
+							<button class="slide-btn next" aria-label="Next image" data-next>
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+            </button>
+
+						</div>
+
+						<div class="product-content">
+
+							<p class="product-subtitle">[Ming·Big Yellow Puppy] Pendant TypeA</p>
+
+							<h1 class="h1 product-title">阿民·大黄挂件(A款)</h1>
+
+							<p class="product-text">
+								大黄小狗的形象来自向客之音团队创作的中国大陆首部客家儿童音乐节《阿民与大黄》，以主人公阿民和大黄小狗的形象设计了实用又可爱的挂件，这是A款颜色。
+							</p>
+
+							<div class="wrapper">
+								<span class="price" data-total-price>¥5.90</span>
+								<!--<span class="badge">66%</span>
+              <del class="del">¥15.00</del>-->
+							</div>
+
+							<div class="btn-group">
+								<div class="counter-wrapper">
+									<button class="counter-btn" data-qty-minus>
+                  <ion-icon name="remove-outline"></ion-icon>
+                </button>
+									<span class="span" data-qty>1</span>
+									<button class="counter-btn" data-qty-plus>
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+								</div>
+
+								<button class="cart-btn">
+                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                <span class="span">Add to cart</span>
+              </button>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="guess-you-like">
+					<a href="jiarugouwuche2.html">
+						<div class="guess-card">
+							<img src="./assets/images/bijiben.jpg" alt="Product 1">
+							<div class="guess-card-content">
+								<h4 class="guess-card-title">笔记本</h4>
+								<p class="guess-card-price">¥19.90</p>
+							</div>
+						</div>
+					</a>
+
+					<a href="jiarugouwuche5.html">
+						<div class="guess-card">
+							<img src="./assets/images/a&h_B.jpg" alt="Product 2">
+							<div class="guess-card-content">
+								<h4 class="guess-card-title">阿民&大黄挂件(B款)</h4>
+								<p class="guess-card-price">¥5.90</p>
+							</div>
+						</div>
+					</a>
+
+					<a href="jiarugouwuche6.html">
+						<div class="guess-card">
+							<img src="./assets/images/a&h_C.jpg" alt="Product 2">
+							<div class="guess-card-content">
+								<h4 class="guess-card-title">阿民&大黄挂件(C款)</h4>
+								<p class="guess-card-price">¥5.90</p>
+							</div>
+						</div>
+					</a>
+
+				</section>
+
+			</article>
+		</main>
+		<a href="cart.html" class="floating-cart-icon" aria-label="购物车">
+			🛒
+		</a>
+		<!-- - ionicon link -->
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+		<!-- 页脚 -->
+		<footer>
+			<div class="footer-content">
+				<p>© 2025 童心汇聚·客家传情 版权所有</p>
+				<p>传承客家文化，弘扬民族精神</p>
+			</div>
+		</footer>
+	</body>
+
+</html>

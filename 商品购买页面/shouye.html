@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>向客之音文创首页</title>
+  <link rel="stylesheet" href="../教育服务&公益参演/css/common.css"/>
+  <link rel="stylesheet" href="./assets/css/shouye.css" />
+  
+  <!-- 添加Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+  <!-- 顶部链接栏 -->
+  <div class="top-bar">
+    <div class="logo-container">
+      <img src="./assets/images/logo1.png" class="logo" alt="Logo">
+      <div class="site-title">
+        <span class="title-left">童心汇聚·</span><span class="title-right">客家传情</span>
+      </div>
+    </div>
+    <div class="top-links">
+      <!-- 检查是否已登录 -->
+	    <script>
+	        if(sessionStorage.getItem("username")) {
+	           document.write('<a href="#" onclick="logout()">退出登录</a>');
+	        } else {
+						document.write('<a href="../log.html">登录</a>');
+			    	document.write('<a href="../index.html">注册</a>');
+	        }
+	        
+	        function logout() {
+	            sessionStorage.removeItem("username");
+	            window.location.href = "home.html";
+	        }
+	    </script>
+      <a href="#">加入收藏</a>
+      <a href="#">设为首页</a>
+    </div>
+  </div>
+  
+  <!-- 主导航栏 -->
+  <header>
+    <nav>
+      <ul>
+        <li class="active"><a href="../教育服务&公益参演/home.html">首页</a></li>
+        <li><a href="../教育服务&公益参演/resource.html"">资源共享</a></li>
+        <li><a href="../商品购买页面/shouye.html"">文创发售</a></li>
+        <li><a href="../教育服务&公益参演/performance.html">公益展演</a></li>
+        <li><a href="../教育服务&公益参演/education.html">教育服务</a></li>
+        <li><a href="../ai编曲页面信息/ai.html">AI编曲</a></li>
+        <li><a href="../我的/wode.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <div class="search-login">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" placeholder="搜索客家文化...">
+    </div>
+  
+</div>
+
+  </header>
+  
+  
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>欢迎来到向客之音文创商城</h1>
+  </section>
+  <!-- 推荐商品区域 -->
+  <h2 class="section-title">为你推荐</h2>
+  <section class="product-grid">
+    <a href="jiarugouwuche.html">
+  	<div class="product-card">
+    	<img src="./assets/images/beidian1.jpg" alt="产品1" />
+      	<h3>大黄小狗·杯垫</h3>
+      	<p>¥9.90</p>
+ 	 	</div>
+		</a>	
+		
+		<a href="jiarugouwuche1.html">
+    <div class="product-card">
+      <img src="./assets/images/guajian12.jpg" alt="产品2" />
+      <h3>大黄·挂件(A款)</h3>
+      <p>¥5.90</p>
+    </div>
+    </a>
+    
+    <a href="jiarugouwuche2.html">
+    <div class="product-card">
+      <img src="./assets/images/bijiben.jpg" alt="产品3" />
+      <h3>笔记本</h3>
+      <p>¥15.90</p>
+    </div>
+    </a>
+    
+    <a href="jiarugouwuche3.html">
+    <div class="product-card">
+      <img src="./assets/images/a&h1.jpg" alt="产品4" />
+    	<h3>阿民&大黄·挂件(A款)</h3>
+    	<p>¥5.90</p>
+    </div>
+    </a>
+    
+    <a href="jiarugouwuche4.html">
+    <div class="product-card">
+      <img src="./assets/images/guajian_B.jpg" alt="产品4" />
+    	<h3>大黄·挂件(B款)</h3>
+    	<p>¥5.90</p>
+    </div>
+    </a>
+    
+    <a href="jiarugouwuche6.html">
+    <div class="product-card">
+      <img src="./assets/images/a&h_C.jpg" alt="产品4" />
+    	<h3>阿民&大黄·挂件(C款)</h3>
+    	<p>¥5.90</p>
+    </div>
+    </a>
+    
+    <a href="jiarugouwuche5.html">
+    <div class="product-card">
+      <img src="./assets/images/a&h_B.jpg" alt="产品4" />
+    	<h3>阿民&大黄·挂件(B款)</h3>
+    	<p>¥5.90</p>
+    </div>
+    </a>
+    
+    
+  </section>
+	<a href="cart.html" class="floating-cart-icon" aria-label="购物车">
+  🛒
+</a>
+
+ <!-- 页脚 -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 童心汇聚·客家传情 版权所有</p>
+      <p>传承客家文化，弘扬民族精神</p>
+    </div>
+  </footer>
+  
+</body>
+</html>
+
