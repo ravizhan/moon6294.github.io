@@ -1,0 +1,225 @@
+/*===================================
+=            自定义变量              =
+===================================*/
+
+:root {
+	/* 预设色调 */
+	--cadet-blue-crayola: hsl(220, 14%, 75%);
+	--dark-electric-blue: hsl(217, 9%, 45%);
+	--shamrock-green: hsl(146, 51%, 41%);
+	--sea-green_10: hsla(146, 75%, 30%, 0.1);
+	--eerie-black: hsl(218, 12%, 13%);
+	--ghost-white: hsl(230, 60%, 98%);
+	--sea-green: hsl(146, 75%, 30%);
+	--honeydew: hsl(146, 74%, 94%);
+	--white: hsl(0, 0%, 100%);
+	--black: hsl(0, 0%, 0%);
+	/* 字体大小 */
+	--fs-1: 2.8rem;
+	--fs-2: 1.8rem;
+	--fs-3: 1.5rem;
+	--fs-4: 1.2rem;
+	/* 字重 */
+	--fw-500: 500;
+	--fw-700: 700;
+	/* 阴影效果 */
+	--shadow-1: 0 2px 3px hsla(0, 0%, 0%, 0.2);
+	--shadow-2: 0 10px 30px -10px var(--sea-green);
+	/* 圆角 */
+	--radius-circle: 50%;
+	--radius-15: 15px;
+	--radius-12: 12px;
+	--radius-10: 10px;
+	--radius-6: 6px;
+	/* 过渡效果 */
+	--transition-1: 0.25s ease;
+	--transition-2: 0.5s ease;
+	--cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+body {
+	font-family: var(--ff-noto-serif);
+	background-image: url('../images/background.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: rgba(255, 255, 255, 0.75);
+	background-blend-mode: lighten;
+	color: var(--text-dark);
+	line-height: 1.6;
+}
+
+
+/*===================================
+=            页面特有样式           =
+===================================*/
+
+
+/*-----------------------------------*\
+  #HERO SECTION
+\*-----------------------------------*/
+
+.hero {
+	background-image: url('../images/kejialou.png');
+	background-color: rgba(255, 255, 255, 0.1);
+	background-blend-mode: lighten;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: papayawhip;
+	text-align: center;
+}
+
+.hero h1 {
+	font-size: 48px;
+	padding: 20px 40px;
+	border-radius: 12px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/*-----------------------------------*\
+  #PRODUCT SECTION
+\*-----------------------------------*/
+
+.section-title {
+	text-align: center;
+	font-size: 32px;
+	margin: 60px 0 20px;
+	color: var(--text-dark);
+}
+
+.product-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 24px;
+	padding: 0 5% 60px;
+}
+
+.product-card {
+	background: var(--white);
+	border-radius: var(--radius-15);
+	box-shadow: var(--shadow-1);
+	padding: 16px;
+	text-align: center;
+	transition: transform var(--transition-1);
+	margin-bottom: 20px;
+}
+
+.product-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+	margin-top: 15px;
+}
+
+.card-title {
+	font-size: var(--fs-3);
+	color: #B97E3A;
+	margin-bottom: 10px;
+	font-weight: var(--fw-700);
+}
+
+.card-price {
+	font-size: var(--fs-4);
+	color: #B97E3A;
+	font-weight: var(--fw-500);
+}
+
+.product-card img {
+	width: 100%;
+	border-radius: var(--radius-12);
+	height: 200px;
+	object-fit: cover;
+}
+/*购物车标识*/
+.floating-cart-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background-color:  #c44e5c;
+  color: white;
+  font-size: 28px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+.floating-cart-icon:hover {
+  background-color:  #8b3a3a;
+}
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+.container {
+	padding-inline: 15px;
+}
+
+.img-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+@media (max-width: 768px) {
+	/* 页面特有响应式样式 */
+	.hero h1 {
+		font-size: 32px;
+		padding: 15px 25px;
+	}
+	.section-title {
+		font-size: 24px;
+		margin: 40px 0 15px;
+	}
+	.product-grid {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: 16px;
+		padding: 0 3% 40px;
+	}
+}
+
+@media (min-width: 992px) {
+	/* 大屏幕样式调整 */
+	.hero {
+		height: 90vh;
+	}
+	.hero h1 {
+		font-size: 56px;
+		padding: 30px 60px;
+	}
+	.section-title {
+		font-size: 36px;
+		margin: 80px 0 30px;
+	}
+	.product-grid {
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 32px;
+		padding: 0 8% 80px;
+	}
+}
