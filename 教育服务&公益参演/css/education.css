@@ -1,0 +1,271 @@
+/* education.css */
+body {
+  background-image: url('../img/客家文化-2.png');
+}
+
+
+/* 标题图片 */
+.title-image {
+  width: 100%;
+  height: 720px; 
+  background-image: url('../img/背景1.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 下乡推送内容 */
+.education-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 5%;
+    text-align: center;
+}
+
+/* 标题背景条 */
+.section-title {
+    text-align: center;
+    color: var(--primary-color);
+    letter-spacing: 12px;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0 auto 40px; /* 改为auto实现水平居中 */
+    position: relative;
+    display: inline-block;
+    padding: 5px 30px; /* 增加上下内边距 */
+    z-index: 1; /* 确保文字在背景上方 */
+}
+
+/* 修改标题背景条 */
+.section-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* 覆盖整个标题高度 */
+    background-color: rgba(249, 243, 233, 0.8);
+    z-index: -1;
+    border-radius: 8px; /* 增大圆角 */
+    transform: skewY(-1deg); /* 减小倾斜角度 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* 添加阴影增强立体感 */
+}
+
+/* 修改标题下划线 */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 5px; /* 调整位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.education-item {
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  width: 100%;
+  max-width: 350px;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+}
+
+.education-image {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+}
+
+.education-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.education-item:hover .education-image img {
+  transform: scale(1.05);
+}
+
+.education-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.education-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 1px;
+  font-weight: bold;
+  font-size: 21px; 
+  letter-spacing: 2px; 
+}
+
+.education-info p {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.education-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+
+/* 媒体报道区域 */
+.media-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 5%;
+  text-align: center;
+}
+
+.media-container {
+  display: flex;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: left;
+}
+
+.media-image {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-image img {
+  max-width: 100%;
+  height: 90%;
+  border-radius: 5px;
+}
+
+.media-list {
+  flex: 1;
+  padding: 30px;
+}
+
+.media-list h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-color);
+  text-align: left;
+}
+
+.media-item {
+  padding: 15px 0;
+  border-bottom: 1px dashed #ddd;
+  text-align: left;
+}
+
+.media-item:last-child {
+  border-bottom: none;
+}
+
+.media-item a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s;
+  display: block;
+}
+
+.media-item a:hover {
+  color: var(--primary-color);
+}
+
+.media-item .date {
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .education-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .media-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+      flex-direction: column;
+      padding: 15px;
+  }
+
+  .logo-container {
+      margin-bottom: 15px;
+  }
+
+  .logo {
+      height: 50px;
+  }
+
+  .site-title {
+      font-size: 22px;
+  }
+
+  .top-links {
+      width: 100%;
+      justify-content: space-around;
+  }
+
+  .top-links a {
+      margin: 0;
+  }
+
+  header {
+      padding: 10px;
+  }
+
+  nav ul {
+      flex-wrap: wrap;
+  }
+
+  nav ul li {
+      padding: 8px 10px;
+      font-size: 15px;
+  }
+
+  .search-login {
+      display: none;
+  }
+
+  .section-title {
+        font-size: 30px;
+        letter-spacing: 5px;
+        padding: 8px 20px; /* 调整内边距 */
+    }
+    .section-title::before {
+        border-radius: 6px;
+    }
+    .section-title::after {
+        width: 60px;
+        bottom: 3px;
+    }
+
+  .education-grid {
+      grid-template-columns: 1fr;
+  }
+}

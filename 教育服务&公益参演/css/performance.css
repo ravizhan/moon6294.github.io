@@ -1,0 +1,592 @@
+/* performance.css */
+body {
+  background-image: url('../img/客家文化-1.png');
+}
+
+/*  主要内容区域样式 */
+.main-content {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 5%;
+}
+
+/* 区域标题 */
+.section-title {
+  text-align: center;
+  color: #943c46; 
+  font-weight: 700;
+  font-size: 42px;
+  margin: 0 auto 40px;
+  position: relative;
+  display: inline-block;
+  padding: 0 30px;
+  letter-spacing: 6px; 
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #c44e5c 20%, 
+    #c44e5c 80%, 
+    transparent 100%);
+}
+
+.section-title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #c44e5c;
+  z-index: -1;
+  text-shadow: 0 0 10px rgba(196,78,92,0.3),
+               0 0 20px rgba(196,78,92,0.2),
+               0 0 30px rgba(196,78,92,0.1);
+  opacity: 0.8;
+}
+
+
+/* 展演卡片容器 */
+.performance-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+/* 卡片头部 */
+.performance-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 25px 30px;
+}
+
+.performance-header h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.performance-meta {
+  display: flex;
+  gap: 30px;
+  font-size: 16px;
+}
+
+.performance-meta i {
+  margin-right: 8px;
+}
+
+/* 卡片主体 */
+.performance-body {
+  padding: 30px;
+}
+
+.performance-intro {
+  margin-bottom: 30px;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.performance-intro p {
+  margin-bottom: 15px;
+}
+
+.performance-details {
+  margin-bottom: 30px;
+}
+
+.performance-details h3 {
+  color: var(--primary-color);
+  font-size: 22px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.performance-details h3 i {
+  margin-right: 10px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.detail-item {
+  background-color: rgba(249, 243, 233, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.detail-item h4 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.detail-item ul {
+  list-style-position: inside;
+  padding-left: 5px;
+}
+
+.detail-item li {
+  margin-bottom: 8px;
+}
+
+.detail-item p {
+  line-height: 1.6;
+}
+
+/* 时间表部分 */
+.performance-schedule {
+  margin-bottom: 20px;
+}
+
+.performance-schedule h3 {
+  color: var(--primary-color);
+  font-size: 22px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.performance-schedule h3 i {
+  margin-right: 10px;
+}
+
+.schedule-table {
+  overflow-x: auto;
+}
+
+.schedule-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.schedule-table th, 
+.schedule-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.schedule-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}
+
+.schedule-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.schedule-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* 卡片页脚 */
+.performance-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
+
+.contact-info h4 {
+  color: var(--secondary-color);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info h4 i {
+  margin-right: 10px;
+}
+
+.contact-info p {
+  font-size: 15px;
+}
+
+.register-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Noto Serif SC', serif;
+}
+
+.register-btn:hover {
+  background-color: #a83e4a;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/*  更多展演预告样式 */
+.more-performances h2 {
+  color: var(--secondary-color);
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.more-performances h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: var(--secondary-color);
+}
+
+.performance-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.performance-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.performance-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.item-date {
+  background-color: var(--primary-color);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.date-day {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.date-month {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.item-content {
+  flex-grow: 1;
+}
+
+.item-content h3 {
+  color: var(--text-dark);
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.item-content p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.detail-btn {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Noto Serif SC', serif;
+  margin-left: 15px;
+  flex-shrink: 0;
+}
+
+.detail-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+
+/* 节目单展示样式 */
+.program-sheets {
+  margin: 40px 0;
+}
+
+.sheet-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.sheet-item {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: all 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sheet-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.sheet-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+  transition: transform 0.3s;
+}
+
+.sheet-item img:hover {
+  transform: scale(1.02);
+}
+
+.sheet-item p {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+
+/*  图片模态框样式 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  overflow: auto;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.modal-content {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  margin: 5% auto;
+  animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.9);}
+  to {transform: scale(1);}
+}
+
+#caption {
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--primary-color);
+}
+
+
+/*  报名信息样式 */
+h3 {
+  color: var(--primary-color);
+  font-size: 22px;
+  margin: 30px 0 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+h3 i {
+  margin-right: 10px;
+}
+
+.registration-info {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 0;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+}
+
+.registration-info p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.qrcode-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qrcode-img {
+  width: 200px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.qrcode-img:hover {
+  transform: scale(1.05);
+}
+
+.qrcode-container p {
+  color: var(--secondary-color);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .logo-container {
+    margin-bottom: 15px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .site-title {
+    font-size: 22px;
+  }
+
+  .top-links {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .top-links a {
+    margin: 0;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  .search-login {
+    display: none;
+  }
+
+  .section-title {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+
+  .performance-header h2 {
+    font-size: 22px;
+  }
+
+  .performance-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-footer {
+    padding: 20px 30px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    text-align: center;
+  }
+
+  .sheet-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .modal-content {
+    max-width: 95%;
+    margin: 20% auto;
+  }
+  
+  .close {
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+  }
+
+  .registration-info {
+    padding: 20px;
+  }
+  
+  .qrcode-img {
+    width: 180px;
+  }
+}
