@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>关于我们</title>
+		<!-- 引入字体与图标库 -->
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<!--  引入样式-->
+		<link rel="stylesheet" href="assets/css/wode.css">
+		<link rel="stylesheet" href="../教育服务&公益参演/css/common.css">
+		<!--引入js-->
+		<script src="../我的/assets/js/wode.js"></script>
+
+	</head>
+
+	<body>
+		<!-- 顶部链接栏 -->
+		<div class="top-bar">
+			<div class="logo-container">
+				<img src="assets/image/logo1.png" class="logo" alt="Logo">
+				<div class="site-title">
+					<span class="title-left">童心汇聚·</span><span class="title-right">客家传情</span>
+				</div>
+			</div>
+			<div class="top-links">
+				<!-- 检查是否已登录 -->
+				<script>
+					if(sessionStorage.getItem("username")) {
+						document.write('<a href="#" onclick="logout()">退出登录</a>');
+					} else {
+						document.write('<a href="../log.html">登录</a>');
+			    		document.write('<a href="../index.html">注册</a>');
+					}
+
+					function logout() {
+						sessionStorage.removeItem("username");
+						window.location.href = "../教育服务&公益参演/home.html";
+					}
+				</script>
+				<a href="#">加入收藏</a>
+				<a href="#">设为首页</a>
+			</div>
+		</div>
+
+		<!-- 主导航栏 -->
+		<header>
+			<nav>
+				<ul>
+					<li class="active">
+						<a href="../教育服务&公益参演/home.html">首页</a>
+					</li>
+					<li>
+						<a href="../教育服务&公益参演/resource.html" ">资源共享</a></li>
+        <li><a href="../商品购买页面/shouye.html "">文创发售</a>
+					</li>
+					<li>
+						<a href="../教育服务&公益参演/performance.html">公益展演</a>
+					</li>
+					<li>
+						<a href="../教育服务&公益参演/education.html">教育服务</a>
+					</li>
+					<li>
+						<a href="../ai编曲页面信息/ai.html">AI编曲</a>
+					</li>
+					<li>
+						<a href="../我的/wode.html">关于我们</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="search-login">
+				<i class="fas fa-search search-icon"></i>
+				<input type="text" placeholder="搜索客家文化...">
+			</div>
+		</header>
+
+		<!-- 横幅区域 -->
+		<div class="wode-content-wrapper">
+			<section class="wode-banner">
+				<div class="banner-text">
+					<h1>团队介绍</h1>
+					<p>我们是一支致力于推动传统文化数字化转型的大学生创新创业团队，围绕“童心汇聚·客家传情”主题，开展项目策划、文创开发、AI技术融合与公益推广，赋能客家文化走进大众视野。</p>
+				</div>
+			</section>
+		</div>
+		<!-- 项目介绍部分 -->
+		<section class="project-intro-section">
+			<h3 class="section-heading">项目简介</h3>
+			<div class="project-intro-content">
+				<img src="assets/image/封面.png" alt="项目封面" class="project-image">
+				<div class="project-text">
+					<p>
+						“童心汇聚·客家传情”项目致力于客家文化的创新传承，结合团队自研的客家文化AI创作平台，通过创造性转化与创新性发展，保护这一非物质文化遗产瑰宝。我们构建了以四大创新板块为支柱的客家文化传承体系："客韵汇剧"儿童戏剧工坊通过原创剧本与IP开发激活青少年文化认知，"客韵共赏"文化交流矩阵以剧场巡演打破传播壁垒，"客韵家音"智慧亲子课程借力AI技术实现代际共学，"客韵传声"数字中枢搭建全球资源共享平台。四大板块形成"创作-展演-教育-传播"的全链生态，让传统文化在数字时代焕发新生。
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- 关于我们内容 -->
+
+		<section class="about-section">
+			<h3 class="section-heading">核心成员</h3>
+			<div class="team-grid">
+				<div class="team-leader-container">
+					<!-- 新增专属容器 -->
+					<div class="team-card leader-card">
+						<img src="assets/image/证件1.png" alt="项目负责人">
+						<div class="leader-text">
+							<!-- 新增文字容器 -->
+							<h4>曾丽敏</h4>
+							<p class="leader-title"><strong style="color: darkred;">项目负责人</strong></p>
+							<p class="leader-desc">负责整体规划与项目协调</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-grid">
+					<div class="team-card">
+						<img src="assets/image/证件3.png" alt="技术负责人">
+						<h4>唐玥</h4>
+						<p><strong style="color: darkred;">技术负责人</strong></p>
+						<p>网站开发与平台搭建</p>
+					</div>
+					<div class="team-card">
+						<img src="assets/image/证件2.png" alt="课程研发部负责人">
+						<h4>陈奕靖</h4>
+						<p><strong style="color: darkred;">课程研发部负责人</strong></p>
+						<p>民族音乐编曲和课程设计</p>
+					</div>
+					<div class="team-card">
+						<img src="assets/image/证件4.png" alt="公关部负责人">
+						<h4>夏游煣</h4>
+						<p><strong style="color: darkred;">公关部负责人</strong></p>
+						<p>视觉设计与用户体验</p>
+					</div>
+				</div>
+
+				<div class="team-grid">
+					<div class="team-card">
+						<img src="assets/image/证件7.png" alt="新媒体部负责人">
+						<h4>冯欣瑶</h4>
+						<p><strong style="color: darkred;">新媒体部负责人</strong></p>
+						<p>社交媒体平台运营管理</p>
+					</div>
+					<div class="team-card">
+						<img src="assets/image/证件6.png" alt="财务部负责人">
+						<h4>肖智丹</h4>
+						<p><strong style="color: darkred;">财务部负责人</strong></p>
+						<p>会计核算与财务分析</p>
+					</div>
+					<div class="team-card">
+						<img src="assets/image/证件5.png" alt="市场营销部负责人">
+						<h4>叶青青</h4>
+						<p><strong style="color: darkred;">市场营销部负责人</strong></p>
+						<p>品牌策划与营销策略制定</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="achievements-section">
+
+			<!-- 设计作品 -->
+			<h3 class="section-heading">设计作品</h3>
+			<div class="design-grid">
+				<div class="design-card">
+					<img src="assets/image/专利1.jpg" class="design-image">
+				</div>
+				<div class="design-card">
+					<img src="assets/image/专利2.jpg" class="design-image">
+				</div>
+				<div class="design-card">
+					<img src="assets/image/专利3.jpg" class="design-image">
+				</div>
+				<div class="design-card">
+					<img src="assets/image/专利4.jpg" class="design-image">
+				</div>
+				<div class="design-card">
+					<img src="assets/image/专利5.jpg" class="design-image">
+				</div>
+			</div>
+		</section>
+
+		<!-- 回到顶部按钮 -->
+		<button onclick="scrollToTop()" id="backToTop" title="回到顶部">↑</button>
+		<section class="about-section">
+			<h3>我们的使命</h3>
+			<div class="mission">
+				<ul>
+					<li>传承客家文化，激发青年参与热情。</li>
+					<li>以AI和互联网手段服务文化传播。</li>
+					<li>打造多元融合的公益+商业+教育生态。</li>
+				</ul>
+			</div>
+			<br />
+			<h3>联系我们</h3>
+			<div class="contact-box">
+				<p><i class="fas fa-phone"></i>负责人电话：+86 186-6536-7533</p>
+				<p><i class="fas fa-envelope"></i>邮箱：653556323@qq.com</p>
+				<p><i class="fas fa-map-marker-alt"></i>地址：广东省广州市华南师范大学大学城校区</p>
+			</div>
+		</section>
+		<!-- 页脚 -->
+		<footer>
+			<div class="footer-content">
+				<p>© 2025 童心汇聚·客家传情 版权所有</p>
+				<p>传承客家文化，弘扬民族精神</p>
+			</div>
+		</footer>
+
+	</body>
+
+</html>
