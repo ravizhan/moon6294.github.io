@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>购物车</title>
+		<link rel="stylesheet" href="../教育服务&公益参演/css/common.css" />
+		<link rel="stylesheet" href="./assets/css/cart.css" />
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const cartContainer = document.getElementById('cart-items');
+				const totalPriceSpan = document.getElementById('total-price');
+
+				function renderCart() {
+					const cart = JSON.parse(localStorage.getItem('cart')) || [];
+					if(cart.length === 0) {
+						cartContainer.innerHTML = "<p>购物车为空</p>";
+						totalPriceSpan.textContent = '0.00';
+						return;
+					}
+
+					let html = '<ul class="cart-list">';
+					let total = 0;
+					cart.forEach((item, index) => {
+						// 确保转换为数字
+						const price = Number(item.price);
+						const qty = Number(item.qty);
+						total += price * qty;
+
+						html += `
+        <li class="cart-item">
+          <span class="item-name">${item.name}</span> 
+          <span class="item-price">￥${price.toFixed(2)}</span> 
+          <span class="item-qty">x ${qty}</span>
+          <button class="delete-btn" data-index="${index}">删除</button>
+        </li>
+      `;
+					});
+					html += '</ul>';
+
+					cartContainer.innerHTML = html;
+					totalPriceSpan.textContent = total.toFixed(2);
+
+					// 绑定删除事件
+					const deleteButtons = document.querySelectorAll('.delete-btn');
+					deleteButtons.forEach(btn => {
+						btn.addEventListener('click', e => {
+							const idx = e.target.getAttribute('data-index');
+							removeItem(idx);
+						});
+					});
+				}
+
+				function removeItem(index) {
+					let cart = JSON.parse(localStorage.getItem('cart')) || [];
+					cart.splice(index, 1);
+					localStorage.setItem('cart', JSON.stringify(cart));
+					renderCart();
+				}
+
+				renderCart();
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<!-- 顶部链接栏 -->
+		<div class="top-bar">
+			<div class="logo-container">
+				<img src="./assets/images/logo1.png" class="logo" alt="Logo">
+				<div class="site-title">
+					<span class="title-left">童心汇聚·</span><span class="title-right">客家传情</span>
+				</div>
+			</div>
+			<div class="top-links">
+				<!-- 检查是否已登录 -->
+				<script>
+					if(sessionStorage.getItem("username")) {
+						document.write('<a href="#" onclick="logout()">退出登录</a>');
+					} else {
+						document.write('<a href="../教育服务&公益参演/登录/log.html">登录</a>');
+						document.write('<a href="../教育服务&公益参演/登录/index.html">注册</a>');
+					}
+
+					function logout() {
+						sessionStorage.removeItem("username");
+						window.location.href = "home.html";
+					}
+				</script>
+				<a href="#">加入收藏</a>
+				<a href="#">设为首页</a>
+			</div>
+		</div>
+
+		<!-- 主导航栏 -->
+		<header>
+			<nav>
+				<ul>
+					<li class="active">
+						<a href="../教育服务&公益参演/home.html">首页</a>
+					</li>
+					<li>
+						<a href="../教育服务&公益参演/resource.html" ">资源共享</a></li>
+        <li><a href="../商品购买页面/shouye.html "">文创发售</a>
+					</li>
+					<li>
+						<a href="../教育服务&公益参演/performance.html">公益展演</a>
+					</li>
+					<li>
+						<a href="../教育服务&公益参演/education.html">教育服务</a>
+					</li>
+					<li>
+						<a href="../ai编曲页面信息/ai.html">AI编曲</a>
+					</li>
+					<li>
+						<a href="../我的/wode.html">关于我们</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="search-login">
+				<i class="fas fa-search search-icon"></i>
+				<input type="text" placeholder="搜索客家文化...">
+			</div>
+
+			</div>
+
+		</header>
+		<header class="cart-header">
+			<h1>我的购物车</h1>
+			<a href="shouye.html" class="back-btn">返回商城</a>
+		</header>
+
+		<main class="cart-container">
+			<div id="cart-items"></div>
+			<div class="cart-summary">
+				<p>总价：¥<span id="total-price">0.00</span></p>
+				<button class="checkout-btn">结算</button>
+			</div>
+		</main>
+
+		<!-- 页脚 -->
+		<footer>
+			<div class="footer-content">
+				<p>© 2025 童心汇聚·客家传情 版权所有</p>
+				<p>传承客家文化，弘扬民族精神</p>
+			</div>
+		</footer>
+	</body>
+
+</html>
