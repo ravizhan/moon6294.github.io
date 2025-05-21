@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《诸葛四郎》详情 - 童心汇聚·客家传情</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+  <!-- 顶部链接栏 -->
+  <div class="top-bar">
+    <div class="logo-container">
+      <img src="../img/客家文化-5.png" class="logo" alt="Logo">
+      <div class="site-title">
+        <span class="title-left">童心汇聚·</span><span class="title-right">客家传情</span>
+      </div>
+    </div>
+    <div class="top-links">
+    <!-- 检查是否已登录 -->
+    <script>
+        if(sessionStorage.getItem("username")) {
+            document.write('<a href="#" onclick="logout()">退出登录</a>');
+        } else {
+            document.write('<a href="../登录/log.html">登录</a>');
+            document.write('<a href="../登录/index.html">注册</a>');
+        }
+        
+        function logout() {
+            sessionStorage.removeItem("username");
+            window.location.href = "home.html";
+        }
+    </script>
+    <a href="#">加入收藏</a>
+    <a href="#">设为首页</a>
+  </div>
+  </div>
+  
+  <!-- 导航栏 -->
+  <header class="detail-nav">
+    <a href="../resource.html" class="back-link">
+      <i class="fas fa-arrow-left"></i>回到资源共享
+    </a>
+  </header>
+  
+  <!-- 详情内容 -->
+  <main class="detail-main">
+    <div class="detail-container">
+      <div class="detail-header">
+        <div class="poster-container">
+          <img src="../img/诸葛四郎1.jpg" alt="诸葛四郎" class="poster">
+        </div>
+        <div class="detail-content">
+          <h1 class="detail-title">《诸葛四郎》</h1>
+          <div class="meta-info">
+            <div><span class="meta-label">类型：</span>客家儿童剧</div>
+            <div><span class="meta-label">作者：</span>叶宏甲</div>
+            <div><span class="meta-label">改编自：</span>《诸葛四郎》漫画</div>
+            <div><span class="meta-label">语言：</span>客家话、普通话</div>
+            <div><span class="meta-label">演出日期：</span>2018-12-29</div>
+            <div><span class="meta-label">演出团体：</span>纸风车剧团</div>
+          </div>
+          <div class="rating">
+            <span class="stars">★★★★★☆</span>
+            <span class="rating-text">(目前无人评价)</span>
+          </div>
+          <div class="action-buttons">
+            <button class="action-btn"><i class="far fa-heart"></i> 想看</button>
+            <button class="action-btn"><i class="fas fa-check"></i> 看过</button>
+            <button class="action-btn"><i class="far fa-edit"></i> 写剧评</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="synopsis-section">
+        <h2 class="section-title">剧情简介</h2>
+        <div class="synopsis-content">
+          <p> 该剧改编自由叶宏甲创作的台湾漫画《诸葛四郎》。</p>
+          <p> 讲述了卫国公主被魔鬼党绑架，诸葛四郎与真平执行营救任务。真平中计被俘后，四郎意外获得山寨机关图，成功救出真平并与魔鬼党达成协议：以地图换回公主。然而卫国反攻山寨时，四名将军配合的军队因地形劣势屡战屡败，四郎怀疑将领中藏有敌方内应。核心矛盾聚焦于军事行动受阻与团队内部的信任危机。</p>
+          <p> 《诸葛四郎》融合了客家山歌与现代武打，讲述智勇英雄勇斗'魔鬼党'的传奇冒险，展现客家人重情重义的精神内核。</p>
+        </div>
+      </div>
+      
+      <div class="gallery-section">
+        <h2 class="section-title">精彩剧照</h2>
+        <div class="gallery-container">
+          <div class="gallery-grid">
+            <div class="gallery-item" style="background-image: url('../img/诸葛四郎2.jpg')"></div>
+            <div class="gallery-item" style="background-image: url('../img/诸葛四郎3.jpg')"></div>
+            <div class="gallery-item" style="background-image: url('../img/诸葛四郎4.jpg')"></div>
+          </div>
+          <button class="gallery-btn view-more">查看更多剧照</button>
+        </div>
+      </div>
+  </main>
+  
+  <!-- 页脚 -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 童心汇聚·客家传情 版权所有</p>
+      <p>传承客家文化，弘扬民族精神</p>
+    </div>
+  </footer>
+</body>
+</html>

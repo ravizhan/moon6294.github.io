@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《桐花岛的故事》详情 - 童心汇聚·客家传情</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+  <!-- 顶部链接栏 -->
+  <div class="top-bar">
+    <div class="logo-container">
+      <img src="../img/客家文化-5.png" class="logo" alt="Logo">
+      <div class="site-title">
+        <span class="title-left">童心汇聚·</span><span class="title-right">客家传情</span>
+      </div>
+    </div>
+    <div class="top-links">
+    <!-- 检查是否已登录 -->
+    <script>
+        if(sessionStorage.getItem("username")) {
+            document.write('<a href="#" onclick="logout()">退出登录</a>');
+        } else {
+            document.write('<a href="../登录/log.html">登录</a>');
+            document.write('<a href="../登录/index.html">注册</a>');
+        }
+        
+        function logout() {
+            sessionStorage.removeItem("username");
+            window.location.href = "home.html";
+        }
+    </script>
+    <a href="#">加入收藏</a>
+    <a href="#">设为首页</a>
+  </div>
+  </div>
+  
+  <!-- 导航栏 -->
+  <header class="detail-nav">
+    <a href="../resource.html" class="back-link">
+      <i class="fas fa-arrow-left"></i>回到资源共享
+    </a>
+  </header>
+  
+  <!-- 详情内容 -->
+  <main class="detail-main">
+    <div class="detail-container">
+      <div class="detail-header">
+        <div class="poster-container">
+          <img src="../img/桐花岛3.jpg" alt="桐花岛的故事" class="poster">
+        </div>
+        <div class="detail-content">
+          <h1 class="detail-title">《桐花岛的故事》</h1>
+          <div class="meta-info">
+            <div><span class="meta-label">类型：</span>客家儿童剧</div>
+            <div><span class="meta-label">作者：</span>小野</div>
+            <div><span class="meta-label">改编自：</span>《宝莉回家》、《天穿日由来》</div>
+            <div><span class="meta-label">语言：</span>客家话、普通话</div>
+            <div><span class="meta-label">演出日期：</span>2016-10-23</div>
+            <div><span class="meta-label">演出团体：</span>纸风车剧团</div>
+          </div>
+          <div class="rating">
+            <span class="stars">★★★★★☆</span>
+            <span class="rating-text">(目前无人评价)</span>
+          </div>
+          <div class="action-buttons">
+            <button class="action-btn"><i class="far fa-heart"></i> 想看</button>
+            <button class="action-btn"><i class="fas fa-check"></i> 看过</button>
+            <button class="action-btn"><i class="far fa-edit"></i> 写剧评</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="synopsis-section">
+        <h2 class="section-title">剧情简介</h2>
+        <div class="synopsis-content">
+          <p>《桐花岛的故事》是由纸风车剧团制作的客家儿童音乐剧，改编自作家小野的作品《宝莉回家》，并融入客家传统节日“天穿日”的传说16。该剧以生动活泼的歌舞、互动式表演和客语元素，讲述了一个关于环保、勇气与团结的奇幻故事。</p>
+          <p> 水神和火神彼此间的战争,让桐花岛历经早灾和水灾,最后把天烧出一个破洞，最后由女娲补天才能解决问题……</p>
+          <p> 该剧透过戏剧与寓言展现环境保护的命题，也让小朋友了解客家文化外，也了解环境生态保护的重要性。</p>
+        </div>
+      </div>
+      
+      <div class="gallery-section">
+        <h2 class="section-title">精彩剧照</h2>
+        <div class="gallery-container">
+          <div class="gallery-grid">
+            <div class="gallery-item" style="background-image: url('../img/桐花岛.jpg')"></div>
+            <div class="gallery-item" style="background-image: url('../img/桐花岛1.jpg')"></div>
+            <div class="gallery-item" style="background-image: url('../img/桐花岛2.jpg')"></div>
+          </div>
+          <button class="gallery-btn view-more">查看更多剧照</button>
+        </div>
+      </div>
+  </main>
+  
+  <!-- 页脚 -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 童心汇聚·客家传情 版权所有</p>
+      <p>传承客家文化，弘扬民族精神</p>
+    </div>
+  </footer>
+</body>
+</html>
