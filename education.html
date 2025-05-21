@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资源共享 - 童心汇聚·客家传情</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/education.css">
+</head>
+<body>
+  <!-- 顶部链接栏 -->
+  <div class="top-bar">
+    <div class="logo-container">
+      <img src="img/客家文化-5.png" class="logo" alt="Logo">
+      <div class="site-title">
+        <span class="title-left">童心汇聚·</span><span class="title-right">客家传情</span>
+      </div>
+    </div>
+    <div class="top-links">
+    <!-- 检查是否已登录 -->
+    <script>
+        if(sessionStorage.getItem("username")) {
+            document.write('<a href="#" onclick="logout()">退出登录</a>');
+        } else {
+            document.write('<a href="../log.html">登录</a>');
+			    document.write('<a href="../index.html">注册</a>');
+        }
+        
+        function logout() {
+            sessionStorage.removeItem("username");
+            window.location.href = "home.html";
+        }
+    </script>
+    <a href="#">加入收藏</a>
+    <a href="#">设为首页</a>
+  </div>
+  </div>
+  
+  <!-- 主导航栏 -->
+  <header>
+    <nav>
+      <ul>
+        <li class="active"><a href="home.html">首页</a></li>
+        <li><a href="resource.html">资源共享</a></li>
+        <li><a href="../商品购买页面/shouye.html">文创发售</a></li>
+        <li><a href="performance.html">公益展演</a></li>
+        <li><a href="education.html">教育服务</a></li>
+        <li><a href="../ai编曲页面信息/ai.html">AI编曲</a></li>
+        <li><a href="../我的/wode.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <div class="search-login">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" placeholder="搜索客家文化...">
+    </div>
+  </header>
+  
+  <!-- 标题图片 -->
+  <div class="title-image"></div>
+  
+  <!-- 下乡推送内容 -->
+  <div class="education-section">
+    <h2 class="section-title">下乡推送</h2>
+    <div class="education-grid">
+      <a href="https://mp.weixin.qq.com/s/PIPGH5b3T8374WwV4nIzbQ" class="education-link" target="_blank">
+        <div class="education-item">
+          <div class="education-image">
+            <img src="img/乡约.png" alt="乡约盛夏，扬帆起航">
+          </div>
+          <div class="education-info">
+            <h3>开营仪式</h3>
+            <p>"乡"约盛夏，扬帆起航</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="https://mp.weixin.qq.com/s/SSVl0RVdLdB3aK-Dd7bsDQ" class="education-link" target="_blank">
+        <div class="education-item">
+          <div class="education-image">
+            <img src="img/扎染.jpg" alt="青出于蓝">
+          </div>
+          <div class="education-info">
+            <h3>青出于蓝</h3>
+            <p>巧手扎绘锦绣色，匠心染出斑斓图</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="https://mp.weixin.qq.com/s/7vdMX8rTGk6jU3PTPu8K_A" class="education-link" target="_blank">
+        <div class="education-item">
+          <div class="education-image">
+            <img src="img/物理.jpg" alt="客韵传新声 童心共绽放">
+          </div>
+          <div class="education-info">
+            <h3>知行合一</h3>
+            <p>析万物之理，永不止步</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="https://mp.weixin.qq.com/s/NkjoIzv-pg6hw-bCmkuRTQ" class="education-link" target="_blank">
+        <div class="education-item">
+          <div class="education-image">
+            <img src="img/音乐.jpg" alt="客家文化进校园">
+          </div>
+          <div class="education-info">
+            <h3>音乐课堂</h3>
+            <p>引吭高唱时代华章，追光逐梦青春理想</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="https://mp.weixin.qq.com/s/kUIfprSTO9uVx1BhH5QMgg" class="education-link" target="_blank">
+        <div class="education-item">
+          <div class="education-image">
+            <img src="img/德育.jpg" alt="客行高砂传古韵，心绘蓝图育新苗">
+          </div>
+          <div class="education-info">
+            <h3>以德育人</h3>
+            <p>春风化细雨，德育润心田</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="https://mp.weixin.qq.com/s/g13bfzj5MtpqVCHh30b-oQ" class="education-link" target="_blank">
+        <div class="education-item">
+          <div class="education-image">
+            <img src="img/结营.png" alt="音乐课堂 | 引吭高唱时代华章">
+          </div>
+          <div class="education-info">
+            <h3>结营汇演</h3>
+            <p>弘扬非遗润人心，客家文化永传承</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+  <!-- 媒体报道区域 -->
+  <div class="media-section">
+    <h2 class="section-title">媒体报道</h2>
+    <div class="media-container">
+      <div class="media-image">
+        <img src="img/媒体.jpg" alt="媒体报道">
+      </div>
+      <div class="media-list">
+        <h2>精选媒体报道</h2>
+        <div class="media-item">
+          <a href="https://luhe-m.itouchtv.cn/#/article/799afb837463857ae131d2ab89717910" target="_blank">暑期夏令营点亮孩子多彩生活</a>
+          <div class="date">2024-08-31</div>
+        </div>
+        <div class="media-item">
+          <a href="https://luhe-m.itouchtv.cn/#/article/a506353331fe811eaedaf32aca67a4ed" target="_blank">暑期多元课程 丰富孩子假期生活</a>
+          <div class="date">2024-08-31</div>
+        </div>
+        <div class="media-item">
+          <a href="https://mp.weixin.qq.com/s/eVtvepo6X8N2g8Lttxo7Qg" target="_blank">华南师范大学"客行者"服务队结营汇演落幕</a>
+          <div class="date">2024-08-26</div>
+        </div>
+        <div class="media-item">
+          <a href="https://m.sohu.com/a/803649674_100186348?_trans_=010004_pcwzy" target="_blank">客行高砂传古韵，心绘蓝图育新苗</a>
+          <div class="date">2024-08-26</div>
+        </div>
+        <div class="media-item">
+          <a href="http://www.dcdxsw.com/shsj/shsjnr/86780.html" target="_blank">弘扬非遗润人心，客家文化永传承——华南师范大学音乐学院"客行者"服务队结营汇演圆满落幕</a>
+          <div class="date">2024-08-31</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 页脚 -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 童心汇聚·客家传情 版权所有</p>
+      <p>传承客家文化，弘扬民族精神</p>
+    </div>
+  </footer>
+
+  <script src="js/resource.js"></script>
+</body>
+</html>
