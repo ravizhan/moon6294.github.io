@@ -1,0 +1,169 @@
+body {
+  font-family: 'Noto Serif SC', serif;
+  background-image: url('../images/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  color: #333;
+  line-height: 1.6;
+}
+
+.cart-header {
+  background-color: #8b3a3a; /* 直接使用色值 */
+  color: white;
+  text-align: center;
+  padding: 60px 10px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.cart-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.cart-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.item-info h4 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+.item-info p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.cart-summary {
+  text-align: right;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.checkout-btn {
+  background: var(--primary-color, #c44e5c);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: #a63b4b;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .back-btn {
+    top: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.item-name {
+  flex: 2;
+}
+
+.item-price,
+.item-qty {
+  flex: 1;
+  text-align: center;
+}
+
+.delete-btn {
+  flex: 0;
+  padding: 5px 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.cart-summary {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-btn {
+  padding: 8px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background-color: #2980b9;
+}
