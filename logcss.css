@@ -1,0 +1,170 @@
+/* logcss.css */
+:root {
+  --primary-color: #c44e5c;
+  --secondary-color: #8c4a3a;
+  --light-bg: #f9f3e9;
+  --nav-bg: #e8d5b5;
+  --text-dark: #333;
+  --text-light: #fff;
+  --text-secondary: #666;
+}
+
+/* 登录/注册页面背景 - 与home一致 */
+.login-bg {
+  background-image: url('img/bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-container {
+  max-width: 450px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.login-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--nav-bg));
+}
+
+.input-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 15px 14px 45px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.input-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(196, 78, 92, 0.2);
+  outline: none;
+}
+
+#username {
+  background-image: url('img/user.jpg');
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 20px;
+}
+
+#password, #repassword {
+  background-image: url('img/password.jpg');
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background-color: #b34452;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-links {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--text-secondary);
+}
+
+.login-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  margin-left: 5px;
+}
+
+.login-links a:hover {
+  color: #b34452;
+  text-decoration: underline;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.separator::before, .separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.separator::before {
+  margin-right: 15px;
+}
+
+.separator::after {
+  margin-left: 15px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .login-container {
+    margin: 40px 20px;
+    padding: 30px 20px;
+  }
+  
+  .login-title {
+    font-size: 24px;
+  }
+}
