@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AI编曲成果 - 童心汇聚·客家传情</title>
+  <!-- 引入字体与图标库 -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href='../教育服务&公益参演/css/common.css'>
+  <link rel="stylesheet" href="assets/css/ai.css">
+  <!-- 引入js -->
+  <script src="assets/js/music_control.js"></script>
+  <script src="assets/js/ai_compose.js"></script>
+</head>
+
+<body>
+
+  <!-- 顶部栏 -->
+  <div class="top-bar">
+    <div class="logo-container">
+      <img src="assets/image/logo1.png" class="logo" alt="Logo">
+      <div class="site-title">
+        <span class="title-left">童心汇聚·</span><span class="title-right">客家传情</span>
+      </div>
+    </div>
+    <div class="top-links">
+      <!-- 检查是否已登录 -->
+	    <script>
+	        if(sessionStorage.getItem("username")) {
+	            document.write('<a href="#" onclick="logout()">退出登录</a>');
+	        } else {
+			    document.write('<a href="../log.html">登录</a>');
+			    document.write('<a href="../index.html">注册</a>');
+	        }
+	        
+	        function logout() {
+	            sessionStorage.removeItem("username");
+	            window.location.href = "home.html";
+	        }
+	    </script>
+      <a href="#">加入收藏</a>
+      <a href="#">设为首页</a>
+    </div>
+  </div>
+
+  <!-- 主导航栏 -->
+  <header>
+    <nav>
+      <ul>
+        <li class="active"><a href="../教育服务&公益参演/home.html">首页</a></li>
+        <li><a href="../教育服务&公益参演/resource.html"">资源共享</a></li>
+        <li><a href="../商品购买页面/shouye.html"">文创发售</a></li>
+        <li><a href="../教育服务&公益参演/performance.html">公益展演</a></li>
+        <li><a href="../教育服务&公益参演/education.html">教育服务</a></li>
+        <li><a href="../ai编曲页面信息/ai.html">AI编曲</a></li>
+        <li><a href="../我的/wode.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <div class="search-login">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" placeholder="搜索客家文化...">
+    </div>
+  </header>
+		<div class="ai-content-wrapper">
+	  <!-- 横幅区域 -->
+		  <section class="ai-banner">
+		    <div class="banner-text">
+		      <h1>AI编曲成果展示</h1>
+		      <p>融合科技与传统，让客家旋律焕发新声</p>
+		 </div>
+	  </section>
+	
+	  <!-- AI音乐展示区 -->
+		<section class="music-gallery">
+			<div class="music-card">
+				<img src="assets/image/音乐1.png" alt="AI音乐1">
+				<h3>客家晨曲</h3>
+				<audio controls class="music-player" src="assets/music/0 (1).wav"></audio>
+			</div>
+			<div class="music-card">
+				<img src="assets/image/音乐2.png" alt="AI音乐2">
+				<h3>田园午后</h3>
+				<audio controls class="music-player" src="assets/music/1 (1).wav"></audio>
+			</div>
+			<div class="music-card">
+				<img src="assets/image/音乐3.png" alt="AI音乐3">
+				<h3>故乡月下</h3>
+				<audio controls class="music-player" src="assets/music/2 (1).wav"></audio>
+			</div>
+		</section>	
+		
+				<!-- AI编曲尝试区 -->
+<section class="ai-compose-section">
+  <h2 class="section-title">🎼 AI编曲实验室</h2>
+
+  <div class="compose-controls">
+    <div class="param-group">
+      <label for="prompt"><i class="fas fa-comment"></i> 请输入描述 (prompt)</label>
+      <textarea id="prompt" rows="3" placeholder="例如：Hakka folk song with guzheng, slow tempo"></textarea>
+    </div>
+
+    <div class="param-group">
+      <label for="duration"><i class="fas fa-clock"></i> 持续时间（秒）</label>
+      <input type="number" id="duration" min="5" max="120" value="30">
+    </div>
+
+    <button id="generate-btn" class="hakka-btn primary">
+      <i class="fas fa-magic"></i> 立即生成
+    </button>
+  </div>
+
+  <div class="result-container">
+    <div class="loading-indicator" id="loading">
+      <div class="hakka-spinner"></div>
+      <p>🎵 正在生成客家旋律，请稍候...</p>
+    </div>
+
+    <div class="music-preview" id="preview">
+      <audio id="generated-audio" controls></audio>
+      <button id="download-btn" class="hakka-btn secondary">
+        <i class="fas fa-download"></i> 下载音乐
+      </button>
+    </div>
+  </div>
+</section>
+
+
+  </div>
+  <!-- 页脚 -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 童心汇聚·客家传情 版权所有</p>
+      <p>传承客家文化，弘扬民族精神</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
