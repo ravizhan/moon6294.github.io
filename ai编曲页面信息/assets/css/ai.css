@@ -1,0 +1,333 @@
+body {
+  font-family: var(--ff-noto-serif);
+  background-image: url('../image/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(255, 255, 255, 0.75);
+  background-blend-mode: lighten;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+ /*内容区包裹容器 */
+.ai-content-wrapper {
+  font-family: 'Noto Serif SC', serif;
+  background-color: rgba(255, 247, 240, 0.65);
+  line-height: 1.6;
+}
+
+/* 横幅 */
+.ai-content-wrapper .ai-banner {
+  background-color: #8b3a3a; /* 直接使用色值 */
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ai-content-wrapper .ai-banner h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* 音乐展示卡片区 */
+
+/* 页面主要内容区域包裹容器 */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 横幅样式 */
+.ai-banner {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ai-banner h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.ai-banner p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 音乐卡片展示区 */
+.music-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 卡片样式 */
+.music-card {
+  background-color:white;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.music-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.music-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.music-card h3 {
+  margin: 15px 0 10px;
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.music-card audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+/* AI编曲实验室样式 */
+.ai-compose-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #fff8f0, #fbe9e7);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Noto Serif SC', serif;
+  transition: all 0.3s ease;
+}
+
+.section-title {
+  text-align: center;
+  color: #8b3a3a;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.compose-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.param-group label {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #5e1b1b;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+textarea#prompt,
+input#duration {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #e5cfcf;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 1rem;
+  font-family: 'Noto Serif SC', serif;
+  color: #5e1b1b;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+textarea#prompt:focus,
+input#duration:focus {
+  border-color: #c44e5c;
+  outline: none;
+}
+
+.hakka-btn {
+  font-size: 1rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hakka-btn.primary {
+  background: #8b3a3a;
+  color: white;
+}
+
+.hakka-btn.secondary {
+  background: #f4dfd8;
+  color: #8b3a3a;
+  border: 1px solid #d9b6a3;
+}
+
+.hakka-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.result-container {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 150px;
+  gap: 1.5rem;
+}
+
+
+.loading-indicator {
+  display: none; 
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.music-preview {
+  display: none; 
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}   
+
+.hakka-spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #f2e7d5;
+  border-top: 5px solid #8b3a3a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+/* 响应式布局 */
+@media screen and (max-width: 600px) {
+  .ai-compose-section {
+    padding: 1.5rem;
+  }
+
+  .param-group label {
+    font-size: 0.95rem;
+  }
+
+  .hakka-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .music-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .music-card {
+    width: 90%;
+  }
+
+  .ai-banner h1 {
+    font-size: 28px;
+  }
+
+  .ai-banner p {
+    font-size: 16px;
+  }
+}
+
+
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+  header, .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .music-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+/* 成功消息样式 */
+.success-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+.success-message i {
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 音频播放器样式优化 */
+#generated-audio {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 下载按钮悬停效果 */
+#download-btn:hover {
+  background: #8b3a3a !important;
+  color: white !important;
+}
+
+
+
