@@ -101,21 +101,17 @@
           <label for="prompt"><i class="fas fa-comment"></i> 请输入描述
             (prompt)</label>
           <textarea id="prompt" rows="3"
-            placeholder="例如：Hakka folk song with guzheng, slow tempo"
-            value="Hakka folk song"></textarea>
+            placeholder="例如：一首轻松愉悦的客家音乐"
+            value="一首轻松愉悦的客家音乐"></textarea>
         </div>
         <div class="param-group">
           <label for="duration"><i class="fas fa-clock"></i> 持续时间（秒）</label>
-          <input type="number" id="duration" min="5" max="120" value="30">
+          <input type="number" id="duration" min="5" max="30" value="30">
         </div>
         <button id="generate-btn" class="hakka-btn primary" id="success">
           <i class="fas fa-magic"></i> 立即生成 </button>
       </div>
       <div class="result-container">
-        <div class="loading-indicator" id="loading">
-          <div class="hakka-spinner"></div>
-          <p>🎵 正在生成客家旋律，请稍候...</p>
-        </div>
         <div class="music-preview" id="preview">
           <audio id="generated-audio" controls></audio>
           <button id="download-btn" class="hakka-btn secondary">
@@ -131,125 +127,6 @@
       <p>传承客家文化，弘扬民族精神</p>
     </div>
   </footer>
-  <script>
-    $(function () {
-      const generateBtn = $('#generate-btn');
-      const loadingIndicator = $('#loading');
-      const preview = $('#preview');
-      const audioElement = $('#generated-audio');
-      const downloadBtn = $('#download-btn');
-      let times = null;
-      function showLoading (show) {
-        loadingIndicator.css('display', show ? 'flex' : 'none');
-        preview.css('display', show ? 'none' : 'flex');
-      }
-
-      generateBtn.on('click', function () {
-        const prompt = $('#prompt').val().trim();
-        const duration = parseInt($('#duration').val(), 10);
-
-        if (!prompt) {
-          alert('请输入描述内容');
-          return;
-        }
-        if (!duration || duration < 5 || duration > 120) {
-          alert('请输入5-120秒之间的持续时间');
-          return;
-        }
-
-        showLoading(true);
-        // let result = {
-        //   "status": "success",
-        //   "taskid": "c177a837-0c26-49fc-a7c7-2b2c323b4bf4"
-        // }
-
-        $.ajax({
-          url: 'http://127.0.0.1:3558/generate_hakka_music',
-          method: 'POST',
-          contentType: 'application/json',
-          data: JSON.stringify({ prompt, duration }),
-          success: function (response) {
-            console.log(response)
-            times = setInterval(function () {
-              checkStatus(response.taskid)
-            }, 3000)
-            /* {
-                "status": "success",
-                "taskid": "c177a837-0c26-49fc-a7c7-2b2c323b4bf4"
-              }
-              */
-            // showLoading(false);
-            // const audioUrl = URL.createObjectURL(response);
-            // audioElement.attr('src', audioUrl);
-            // audioElement[0].load();
-            // audioElement[0].play();
-            let responsedata = 'http://127.0.0.1:3558/generated_audio/' + response.taskid + '.wav';
-
-            // 下载音乐
-            downloadBtn.on('click', function () {
-              const a = document.createElement('a');
-              a.href = response;
-              a.download = responsedata;
-              document.body.appendChild(a);
-              a.click();
-              a.remove();
-            });
-          },
-          error: function () {
-            showLoading(false);
-            alert('生成失败，请检查后台服务');
-          }
-        });
-      });
-      // 轮询接口/status/{task_id}
-      // {
-      //   "status": "success",
-      //   "taskid": "c177a837-0c26-49fc-a7c7-2b2c323b4bf4"
-      // }
-      function checkStatus (taskId) {
-        $.ajax({
-          url: 'http://127.0.0.1:3558/check_status/' + taskId,
-          type: 'GET',
-          dataType: 'JSON',
-          success: function (data) {
-            console.log(data)
-            if (data.status == 'completed') {
-              let response = 'http://127.0.0.1:3558/generated_audio/' + taskId + '.wav';
-              console.log(response)
-              showLoading(false);
-              // const audioUrl = URL.createObjectURL(response);
-              // audioElement.attr('src', audioUrl);
-              audioElement.attr('src', response);
-              audioElement[0].load();
-              audioElement[0].play();
-
-              downloadBtn.on('click', function () {
-                const a = document.createElement('a');
-                a.href = response;
-                a.download = response;
-                document.body.appendChild(a);
-                a.click();
-                a.remove();
-              });
-              clearInterval(times);
-              times = null;
-            } else if (data.status == 'failed') {
-              alert(data.error)
-              showLoading(false);
-              clearInterval(times);
-              times = null;
-            }
-          },
-          error: function () {
-            showLoading(false);
-            clearInterval(times);
-            times = null;
-            alert('查询失败，请检查后台服务');
-          }
-        })
-      }
-    })
-  </script>
 </body>
 
 </html>
